@@ -47,7 +47,32 @@ sans-serif;
     &__water-waste {
         background-image: url(../img/Savethewater.jpg);
     }
+
+    &__industry {
+        background-image: url(../img/Industry.jpg);
+    }
+
+    &__climate {
+        background-image: url(../img/Dryandfire.jpg);
+    }
+
+    &__waste {
+        background-image: url(../img/Waste.jpg);
+    }
+
+    &__overpopulated {
+        background-image: url(../img/Overpopulated.jpg);
+    }
+
+    &__poor {
+        background-image: url(../img/Poor.jpg);
+    }
+
+    &__recykling {
+        background-image: url(../img/recyklingbins.jpg);
+    }
 }
+
 
 .section {
     position: relative;

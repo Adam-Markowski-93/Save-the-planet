@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap&subset=latin-ext");
+@-webkit-keyframes mainTitleApperace {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@keyframes mainTitleApperace {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +62,30 @@
   background-image: url(../img/Savethewater.jpg);
 }
 
+.main__industry {
+  background-image: url(../img/Industry.jpg);
+}
+
+.main__climate {
+  background-image: url(../img/Dryandfire.jpg);
+}
+
+.main__waste {
+  background-image: url(../img/Waste.jpg);
+}
+
+.main__overpopulated {
+  background-image: url(../img/Overpopulated.jpg);
+}
+
+.main__poor {
+  background-image: url(../img/Poor.jpg);
+}
+
+.main__recykling {
+  background-image: url(../img/recyklingbins.jpg);
+}
+
 .section {
   position: relative;
   width: 100%;
@@ -52,23 +93,5 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-@-webkit-keyframes mainTitleApperace {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 30px;
-  }
-}
-
-@keyframes mainTitleApperace {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 30px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
