@@ -24,6 +24,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+html {
+  font-size: 10px;
+}
+
 .main {
   display: -ms-grid;
   display: grid;
@@ -37,10 +41,10 @@
   display: block;
   position: absolute;
   top: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 80px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8rem;
   color: white;
   font-weight: 200;
 }
@@ -52,6 +56,59 @@
 .main__title--animation {
   -webkit-animation: mainTitleApperace 1s 1 both;
           animation: mainTitleApperace 1s 1 both;
+}
+
+.main__description {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: rgba(100, 100, 100, 0.3);
+  padding: 15px 25px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__description--white {
+  color: white;
+}
+
+.main__h2 {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.main__article {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.6rem;
+}
+
+.main__link {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  font-size: 1.7rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .main__start {

@@ -5,12 +5,17 @@
 
 $mainFont: 'Raleway',
 sans-serif;
+$mainFontSize: 10px;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $mainFont;
+}
+
+html {
+    font-size: $mainFontSize;
 }
 
 .main {
@@ -22,11 +27,10 @@ sans-serif;
         display: block;
         position: absolute;
         top: 50px;
-        left: 50%;
-        // width: 100%;
-        // text-align: center;
-        transform: translateX(-50%);
-        font-size: 80px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 8rem;
         color: white;
         font-weight: 200;
 
@@ -39,6 +43,47 @@ sans-serif;
             animation: mainTitleApperace 1s 1 both;
         }
     }
+
+    &__description {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        background-color: rgba(100, 100, 100, 0.3);
+        padding: 15px 25px;
+        border-radius: 15px;
+
+        display: flex;
+        flex-direction: column;
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__h2 {
+        flex-basis: 10%;
+        align-self: center;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+    }
+
+    &__article {
+        flex-grow: 1;
+        align-self: center;
+        font-size: 1.6rem;
+    }
+
+    &__link {
+        flex-basis: 10%;
+        align-self: flex-end;
+
+        text-decoration: none;
+        color: white;
+        margin-top: 10px;
+        font-size: 1.7rem;
+        transition: 0.2s;
+    }
+
 
     &__start {
         background-image: url(../img/Startimg2.jpg);
