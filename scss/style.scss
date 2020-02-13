@@ -39,6 +39,10 @@ html {
             color: black;
         }
 
+        &--background-darken {
+            background-color: rgba(100, 100, 100, 0.5);
+        }
+
         &--animation {
             animation: mainTitleApperace 1s 1 both;
         }
@@ -55,6 +59,10 @@ html {
 
         display: flex;
         flex-direction: column;
+
+        &--animation {
+            animation: descriptionBox 1s 1 both;
+        }
 
         &--white {
             color: white;
