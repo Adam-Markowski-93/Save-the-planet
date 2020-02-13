@@ -16,6 +16,24 @@
   }
 }
 
+@-webkit-keyframes descriptionBox {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
+@keyframes descriptionBox {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +71,10 @@ html {
   color: black;
 }
 
+.main__title--background-darken {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
 .main__title--animation {
   -webkit-animation: mainTitleApperace 1s 1 both;
           animation: mainTitleApperace 1s 1 both;
@@ -73,6 +95,11 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main__description--animation {
+  -webkit-animation: descriptionBox 1s 1 both;
+          animation: descriptionBox 1s 1 both;
 }
 
 .main__description--white {
