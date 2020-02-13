@@ -19,5 +19,15 @@ document.addEventListener('scroll', () => {
 
     console.log(eachSectionFromTop);
 
+    //All conditions to relase an effects
 
+    if (valueOfScroll > eachSectionFromTop[1] + sectionHeight - windowHeight) {
+        allSections[1].classList.add("animation");
+    }
+
+    if (valueOfScroll < 50) {
+        allSections.forEach(section => {
+            section.classList.remove("amination");
+        })
+    }
 })

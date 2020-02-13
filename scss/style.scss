@@ -51,12 +51,17 @@ html {
         background-color: rgba(100, 100, 100, 0.3);
         padding: 15px 25px;
         border-radius: 15px;
+        max-width: 50%;
 
         display: flex;
         flex-direction: column;
 
         &--white {
             color: white;
+        }
+
+        &--darken {
+            background-color: rgba(100, 100, 100, 0.9);
         }
     }
 

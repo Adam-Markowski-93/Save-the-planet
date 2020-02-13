@@ -65,6 +65,7 @@ html {
   background-color: rgba(100, 100, 100, 0.3);
   padding: 15px 25px;
   border-radius: 15px;
+  max-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +77,10 @@ html {
 
 .main__description--white {
   color: white;
+}
+
+.main__description--darken {
+  background-color: rgba(100, 100, 100, 0.9);
 }
 
 .main__h2 {
