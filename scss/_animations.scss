@@ -1,4 +1,6 @@
-@keyframes mainTitleApperace {
+// Animations for title move and apperance
+
+@keyframes mainTitleApperance {
     0% {
         top: -100%;
     }
@@ -8,12 +10,34 @@
     }
 }
 
-@keyframes descriptionBox {
+@keyframes textTitleMove {
     0% {
-        left: -100%;
+        left: 0
     }
 
     100% {
-        left: 30px;
+        left: 100px;
+    }
+}
+
+//Animations for main__description
+
+@keyframes sectionArticleApperance {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 30px;
+    }
+}
+
+@keyframes sectionArticleMove {
+    0% {
+        left: 80px;
+    }
+
+    100% {
+        left: 20px;
     }
 }

@@ -26,7 +26,7 @@ html {
     &__title {
         display: block;
         position: absolute;
-        top: 50px;
+        top: -100%;
         left: 0;
         right: 0;
         text-align: center;
@@ -44,14 +44,14 @@ html {
         }
 
         &--animation {
-            animation: mainTitleApperace 1s 1 both;
+            animation: mainTitleApperance 1s 1 both, textTitleMove 20s 1s infinite reverse both;
         }
     }
 
     &__description {
         position: absolute;
         bottom: 30px;
-        left: 30px;
+        left: -100%;
         background-color: rgba(100, 100, 100, 0.3);
         padding: 15px 25px;
         border-radius: 15px;
@@ -61,7 +61,7 @@ html {
         flex-direction: column;
 
         &--animation {
-            animation: descriptionBox 1s 1 both;
+            animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
         }
 
         &--white {
@@ -131,7 +131,6 @@ html {
     }
 }
 
-
 .section {
     position: relative;
     width: 100%;
@@ -139,4 +138,14 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+
+    &.animation .main__title {
+        animation: mainTitleApperance 1s 1 both, textTitleMove 20s linear 1s infinite alternate both;
+    }
+
+    &.animation .main__description {
+        animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
+    }
+
 }
