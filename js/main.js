@@ -1,27 +1,39 @@
-const rootElement = document.querySelector('.root');
-const sections = document.querySelectorAll("section");
+document.addEventListener("DOMContentLoaded", function () {
 
-let visibleSectionIndex = 0;
+    const rootElement = document.querySelector('.root');
+    const sections = document.querySelectorAll("section");
 
-let scrollingBlocade = false;
+    let visibleSectionIndex = 0;
 
-document.addEventListener('wheel', function (event) {
-    const direction = event.deltaY > 0 ? 1 : -1;
+    let scrollingBlocade = false;
 
-    if (direction === 1) {
-        const checkLastSection = visibleSectionIndex === sections.length - 1;
-        if (checkLastSection) return;
-    } else if (direction === -1) {
-        const checkFirstSection = visibleSectionIndex === 0;
-        if (checkFirstSection) return;
-    }
+    document.addEventListener('wheel', function (event) {
 
-    visibleSectionIndex = visibleSectionIndex + direction;
+        if (scrollingBlocade) return;
 
-    sections[visibleSectionIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+        scrollingBlocade = true;
+
+        setTimeout(function () {
+            scrollingBlocade = false;
+        }, 1000);
+
+        const direction = event.deltaY > 0 ? 1 : -1;
+
+        if (direction === 1) {
+            const checkLastSection = visibleSectionIndex === sections.length - 1;
+            if (checkLastSection) return;
+        } else if (direction === -1) {
+            const checkFirstSection = visibleSectionIndex === 0;
+            if (checkFirstSection) return;
+        }
+
+        visibleSectionIndex = visibleSectionIndex + direction;
+
+        console.log(visibleSectionIndex);
+
+        sections[visibleSectionIndex].scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
     });
-
-    console.log(visibleSectionIndex);
-})
+});
