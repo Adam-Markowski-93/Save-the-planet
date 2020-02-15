@@ -30,8 +30,9 @@ html {
         top: -100%;
         left: 0;
         right: 0;
+        padding: 0 75px;
         text-align: center;
-        font-size: 8rem;
+        font-size: 10rem;
         color: white;
         font-weight: 200;
 
@@ -47,16 +48,31 @@ html {
         &--animation {
             animation: mainTitleApperance 1s 1 both;
         }
+
+        @include mq (large) {
+            font-size: 8rem;
+        }
+
+        @include mq (small) {
+            font-size: 4.5rem;
+            padding: 0 50px;
+        }
+
+        @include mq (very-small) {
+            font-size: 3.5rem;
+            padding: 0 50px;
+            font-weight: 300;
+        }
     }
 
     &__description {
         position: absolute;
         bottom: -100%;
         left: 80px;
-        background-color: rgba(100, 100, 100, 0.3);
+        background-color: rgba(100, 100, 100, 0.7);
         padding: 15px 25px;
         border-radius: 15px;
-        max-width: 50%;
+        max-width: 65%;
 
         display: flex;
         flex-direction: column;
@@ -68,23 +84,52 @@ html {
         &--white {
             color: white;
         }
-
-        &--darken {
-            background-color: rgba(100, 100, 100, 0.9);
-        }
     }
 
     &__h2 {
         flex-basis: 10%;
         align-self: center;
-        font-size: 3.5rem;
+        font-size: 4.5rem;
         margin-bottom: 10px;
+
+        @include mq (large) {
+            font-size: 3.5rem;
+        }
+
+        @include mq (medium) {
+            font-size: 4.5rem;
+        }
+
+        @include mq (small) {
+            font-size: 3rem;
+        }
+
+        @include mq (very-small) {
+            font-size: 2rem;
+        }
     }
 
     &__article {
         flex-grow: 1;
         align-self: center;
-        font-size: 1.6rem;
+        font-size: 2rem;
+        color: white;
+
+        @include mq (large) {
+            font-size: 1.5rem;
+        }
+
+        @include mq (medium) {
+            font-size: 2rem;
+        }
+
+        @include mq (small) {
+            font-size: 1.5rem;
+        }
+
+        @include mq (very-small) {
+            font-size: 1.2rem;
+        }
     }
 
     &__link {
@@ -94,8 +139,24 @@ html {
         text-decoration: none;
         color: white;
         margin-top: 10px;
-        font-size: 1.7rem;
+        font-size: 2.3rem;
         transition: 0.2s;
+
+        @include mq (large) {
+            font-size: 1.8rem;
+        }
+
+        @include mq (medium) {
+            font-size: 2.3rem;
+        }
+
+        @include mq (small) {
+            font-size: 1.8rem;
+        }
+
+        @include mq (very-small) {
+            font-size: 1.5rem;
+        }
     }
 
 
@@ -142,11 +203,11 @@ html {
     overflow: hidden;
 
     &.animation .main__title {
-        animation: mainTitleApperance 1s 1 both, textTitleMove 20s linear 1s infinite alternate both;
+        animation: mainTitleApperance 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
     }
 
     &.animation .main__description {
-        animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear alternate backwards;
+        animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
     }
 
 }

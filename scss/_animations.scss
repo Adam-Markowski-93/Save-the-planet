@@ -12,11 +12,13 @@
 
 @keyframes textTitleMove {
     0% {
-        left: 0
+        left: 0;
+        right: 0;
     }
 
     100% {
-        left: 100px;
+        left: 30px;
+        right: -30px;
     }
 }
 
@@ -41,3 +43,12 @@
         left: 20px;
     }
 }
+
+// @keyframes sectionSixTitleMove {
+//     0% {
+//         left: -20%;
+//     }
+//     100% {
+//         left: 10%;
+//     }
+// }
