@@ -44,7 +44,7 @@ document.addEventListener('scroll', () => {
         allSections[7].classList.add("animation");
     }
 
-    if (valueOfScroll < 50) {
+    if (valueOfScroll == 0) {
         allSections.forEach(section => {
             section.classList.remove("animation");
         })
