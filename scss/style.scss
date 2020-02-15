@@ -44,14 +44,14 @@ html {
         }
 
         &--animation {
-            animation: mainTitleApperance 1s 1 both, textTitleMove 20s 1s infinite reverse both;
+            animation: mainTitleApperance 1s 1 both;
         }
     }
 
     &__description {
         position: absolute;
-        bottom: 30px;
-        left: -100%;
+        bottom: -100%;
+        left: 80px;
         background-color: rgba(100, 100, 100, 0.3);
         padding: 15px 25px;
         border-radius: 15px;
@@ -61,7 +61,7 @@ html {
         flex-direction: column;
 
         &--animation {
-            animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
+            animation: sectionArticleApperance 1s 1 ease both;
         }
 
         &--white {
@@ -145,7 +145,7 @@ html {
     }
 
     &.animation .main__description {
-        animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
+        animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear alternate backwards;
     }
 
 }
