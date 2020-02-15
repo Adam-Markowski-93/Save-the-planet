@@ -16,8 +16,7 @@ document.addEventListener('scroll', () => {
 
     // In that case all sections have the same height, I decided to get from any.
     const sectionHeight = allSections[0].offsetHeight;
-    console.log(eachSectionFromTop);
-    console.log(valueOfScroll);
+
     //All conditions to relase an effects
 
     if (valueOfScroll === 0) {
