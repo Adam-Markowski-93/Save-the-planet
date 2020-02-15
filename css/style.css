@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap&subset=latin-ext");
-@-webkit-keyframes mainTitleApperace {
+@-webkit-keyframes mainTitleApperance {
   0% {
     top: -100%;
   }
@@ -7,7 +7,7 @@
     top: 30px;
   }
 }
-@keyframes mainTitleApperace {
+@keyframes mainTitleApperance {
   0% {
     top: -100%;
   }
@@ -16,21 +16,57 @@
   }
 }
 
-@-webkit-keyframes descriptionBox {
+@-webkit-keyframes textTitleMove {
   0% {
-    left: -100%;
+    left: 0;
   }
   100% {
-    left: 30px;
+    left: 100px;
   }
 }
 
-@keyframes descriptionBox {
+@keyframes textTitleMove {
   0% {
-    left: -100%;
+    left: 0;
   }
   100% {
-    left: 30px;
+    left: 100px;
+  }
+}
+
+@-webkit-keyframes sectionArticleApperance {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes sectionArticleApperance {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@-webkit-keyframes sectionArticleMove {
+  0% {
+    left: 80px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+
+@keyframes sectionArticleMove {
+  0% {
+    left: 80px;
+  }
+  100% {
+    left: 20px;
   }
 }
 
@@ -58,7 +94,7 @@ html {
 .main__title {
   display: block;
   position: absolute;
-  top: 50px;
+  top: -100%;
   left: 0;
   right: 0;
   text-align: center;
@@ -76,14 +112,13 @@ html {
 }
 
 .main__title--animation {
-  -webkit-animation: mainTitleApperace 1s 1 both;
-          animation: mainTitleApperace 1s 1 both;
+  animation: mainTitleApperance 1s 1 both, textTitleMove 20s 1s infinite reverse both;
 }
 
 .main__description {
   position: absolute;
   bottom: 30px;
-  left: 30px;
+  left: -100%;
   background-color: rgba(100, 100, 100, 0.3);
   padding: 15px 25px;
   border-radius: 15px;
@@ -98,8 +133,8 @@ html {
 }
 
 .main__description--animation {
-  -webkit-animation: descriptionBox 1s 1 both;
-          animation: descriptionBox 1s 1 both;
+  -webkit-animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
+          animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
 }
 
 .main__description--white {
@@ -182,5 +217,16 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
+
+.section.animation .main__title {
+  -webkit-animation: mainTitleApperance 1s 1 both, textTitleMove 20s linear 1s infinite alternate both;
+          animation: mainTitleApperance 1s 1 both, textTitleMove 20s linear 1s infinite alternate both;
+}
+
+.section.animation .main__description {
+  -webkit-animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
+          animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 20s 1s infinite linear both;
 }
 /*# sourceMappingURL=style.css.map */

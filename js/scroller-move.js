@@ -17,17 +17,36 @@ document.addEventListener('scroll', () => {
         eachSectionFromTop.push(secHei);
     }
 
-    console.log(eachSectionFromTop);
-
     //All conditions to relase an effects
 
+    if (valueOfScroll === 0) {
+        allSections[0].classList.add("animation");
+    }
     if (valueOfScroll > eachSectionFromTop[1] + sectionHeight - windowHeight) {
         allSections[1].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[2] + sectionHeight - windowHeight) {
+        allSections[2].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[3] + sectionHeight - windowHeight) {
+        allSections[3].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[4] + sectionHeight - windowHeight) {
+        allSections[4].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[5] + sectionHeight - windowHeight) {
+        allSections[5].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[6] + sectionHeight - windowHeight) {
+        allSections[6].classList.add("animation");
+    }
+    if (valueOfScroll > eachSectionFromTop[7] + sectionHeight - windowHeight) {
+        allSections[7].classList.add("animation");
     }
 
     if (valueOfScroll < 50) {
         allSections.forEach(section => {
-            section.classList.remove("amination");
+            section.classList.remove("animation");
         })
     }
 })
