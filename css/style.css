@@ -480,6 +480,12 @@ html {
   border-radius: 5px;
 }
 
+@media (orientation: landscape) and (max-width: 830px) {
+  .navigation {
+    height: 40%;
+  }
+}
+
 .navigation__list {
   list-style: none;
   display: -webkit-box;

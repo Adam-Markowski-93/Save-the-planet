@@ -1,3 +1,5 @@
+// Object to keep value of slide (start position and end position)
+
 const sliderMove = {
     startTouchY: null,
     startTouchX: null,
@@ -7,6 +9,7 @@ const endMove = {
     endtouchX: null,
 }
 
+// Object with new events 
 const events = {
     swipeUp: new Event('swipeUp'),
     swipeDown: new Event('swipeDown'),
@@ -18,14 +21,11 @@ function startTouch(event) {
     event.preventDefault();
     sliderMove.startTouchX = event.touches[0].clientX;
     sliderMove.startTouchY = event.touches[0].clientY;
-    // console.log(sliderMove.startTouchX);
-    // console.log(sliderMove.startTouchY);
 }
 
 function moveTouch(event) {
     if (!sliderMove.startTouchX || !sliderMove.startTouchY) {
         return;
-
     }
     endMove.endtouchX = event.touches[0].clientX;
     endMove.endtouchY = event.touches[0].clientY;

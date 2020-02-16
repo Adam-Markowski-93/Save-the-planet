@@ -49,6 +49,8 @@ html {
             animation: mainTitleApperance 1s 1 both;
         }
 
+        //Media Queries for main__title
+
         @include mq (large) {
             font-size: 8rem;
         }
@@ -109,6 +111,8 @@ html {
         font-size: 4.5rem;
         margin-bottom: 10px;
 
+        // Media Queries for description title
+
         @include mq (large) {
             font-size: 3.5rem;
         }
@@ -147,6 +151,8 @@ html {
         align-self: center;
         font-size: 2rem;
         color: white;
+
+        // Media Queries for description article
 
         @include mq (large) {
             font-size: 1.5rem;
@@ -191,6 +197,8 @@ html {
         font-size: 2.3rem;
         transition: 0.2s;
 
+        // Media Queries for description link
+
         @include mq (large) {
             font-size: 1.8rem;
         }
@@ -220,6 +228,7 @@ html {
         }
     }
 
+    //Background for each section
 
     &__start {
         background-image: url(../img/Startimg2.jpg);
@@ -263,6 +272,8 @@ html {
     background-position: center;
     overflow: hidden;
 
+    // Animation for desktop and phone resolution
+
     &.animation .main__title {
         animation: mainTitleApperance 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
 
@@ -280,6 +291,8 @@ html {
     }
 }
 
+// Navigation styles
+
 .navigation {
     position: fixed;
     top: 50%;
@@ -289,6 +302,10 @@ html {
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+
+    @media (orientation: landscape) and (max-width: 830px) {
+        height: 40%;
+    }
 
     &__list {
         list-style: none;
