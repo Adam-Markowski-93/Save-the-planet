@@ -25,6 +25,7 @@ function startTouch(event) {
 function moveTouch(event) {
     if (!sliderMove.startTouchX || !sliderMove.startTouchY) {
         return;
+
     }
     endMove.endtouchX = event.touches[0].clientX;
     endMove.endtouchY = event.touches[0].clientY;

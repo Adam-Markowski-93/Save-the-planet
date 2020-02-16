@@ -506,12 +506,14 @@ html {
   width: 5px;
   border: 1px solid white;
   border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.navigation__item .active {
-  -ms-flex-preferred-size: 8px;
-      flex-basis: 8px;
-  width: 8px;
+.navigation__item.active {
+  -ms-flex-preferred-size: 9px;
+      flex-basis: 9px;
+  width: 9px;
   background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

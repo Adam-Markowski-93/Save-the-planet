@@ -306,10 +306,11 @@ html {
         width: 5px;
         border: 1px solid white;
         border-radius: 50%;
+        transition: 0.2s;
 
-        & .active {
-            flex-basis: 8px;
-            width: 8px;
+        &.active {
+            flex-basis: 9px;
+            width: 9px;
             background-color: #fff;
         }
     }

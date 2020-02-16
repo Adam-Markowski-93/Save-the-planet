@@ -6,6 +6,7 @@ let visibleSectionIndex = 0;
 let scrollingBlocade = false;
 
 function moveToSection(index) {
+    activeSectionInNav();
     sections[index].scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -26,7 +27,45 @@ function setDirection(direction) {
     moveToSection(visibleSectionIndex);
 }
 
+const navigation = document.createElement('aside');
+navigation.classList.add("navigation")
+
+const listUl = document.createElement('ul');
+listUl.classList.add('navigation__list');
+
+[...document.querySelectorAll('section')].forEach((section, index) => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('navigation__item');
+
+    listItem.addEventListener('click', () => {
+        visibleSectionIndex = index;
+        moveToSection(index);
+    })
+
+    listUl.appendChild(listItem);
+})
+
+navigation.appendChild(listUl);
+
+document.body.appendChild(navigation);
+
+function activeSectionInNav() {
+    const navItems = document.querySelectorAll('.navigation__item');
+
+    navItems.forEach((item, index) => {
+        if (index === visibleSectionIndex) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    })
+}
+
+// EVENT LISTENERS //
+
+// Listenig on mousewheel move
 document.addEventListener('wheel', function (event) {
+
     if (scrollingBlocade) return;
 
     scrollingBlocade = true;
