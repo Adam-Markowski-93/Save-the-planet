@@ -17,4 +17,4 @@ This site is inspired by Udemy tutorial from Samuraj Programowania - Advanced ef
 
 ## Link to site
 
-
+https://boring-yonath-752656.netlify.com
