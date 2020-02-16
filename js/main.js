@@ -45,3 +45,6 @@ document.addEventListener('keydown', (event) => {
     if (event.keyCode === 40) return setDirection(1);
     else if (event.keyCode === 38) return setDirection(-1);
 })
+
+document.addEventListener('swipeUp', () => setDirection(1));
+document.addEventListener('swipeDown', () => setDirection(-1));
