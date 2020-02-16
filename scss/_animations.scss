@@ -10,6 +10,16 @@
     }
 }
 
+@keyframes phoneMainTitleApp {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+
 @keyframes textTitleMove {
     0% {
         left: 0;
@@ -31,6 +41,16 @@
 
     100% {
         bottom: 30px;
+    }
+}
+
+@keyframes phoneSecArtApperance {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 10px;
     }
 }
 

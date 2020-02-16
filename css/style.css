@@ -16,6 +16,24 @@
   }
 }
 
+@-webkit-keyframes phoneMainTitleApp {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes phoneMainTitleApp {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
 @-webkit-keyframes textTitleMove {
   0% {
     left: 0;
@@ -53,6 +71,24 @@
   }
   100% {
     bottom: 30px;
+  }
+}
+
+@-webkit-keyframes phoneSecArtApperance {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes phoneSecArtApperance {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 10px;
   }
 }
 
@@ -143,6 +179,31 @@ html {
   }
 }
 
+@media (max-width: 830px) and (orientation: landscape) {
+  .main__title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 670px) and (orientation: landscape) {
+  .main__title {
+    font-size: 4.2rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 570px) {
+  .main__title {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1020px) {
+  .main__title {
+    font-size: 10rem;
+  }
+}
+
 .main__description {
   position: absolute;
   bottom: -100%;
@@ -203,6 +264,30 @@ html {
   }
 }
 
+@media (max-width: 830px) and (orientation: landscape) {
+  .main__h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 670px) and (orientation: landscape) {
+  .main__h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 570px) {
+  .main__h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1020px) {
+  .main__h2 {
+    font-size: 5.5rem;
+  }
+}
+
 .main__article {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -235,6 +320,30 @@ html {
 @media (max-width: 360px) {
   .main__article {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 830px) and (orientation: landscape) {
+  .main__article {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 670px) and (orientation: landscape) {
+  .main__article {
+    font-size: 1.5rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 570px) {
+  .main__article {
+    font-size: 1.2rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1020px) {
+  .main__article {
+    font-size: 3rem;
   }
 }
 
@@ -272,6 +381,24 @@ html {
 @media (max-width: 360px) {
   .main__link {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 670px) and (orientation: landscape) {
+  .main__link {
+    font-size: 1.8rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 570px) {
+  .main__link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1020px) {
+  .main__link {
+    font-size: 3rem;
   }
 }
 
@@ -322,8 +449,22 @@ html {
           animation: mainTitleApperance 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
 }
 
+@media (orientation: landscape) and (max-width: 830px) {
+  .section.animation .main__title {
+    -webkit-animation: phoneMainTitleApp 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
+            animation: phoneMainTitleApp 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
+  }
+}
+
 .section.animation .main__description {
   -webkit-animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
           animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
+}
+
+@media (orientation: landscape) and (max-width: 830px) {
+  .section.animation .main__description {
+    -webkit-animation: phoneSecArtApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
+            animation: phoneSecArtApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
+  }
 }
 /*# sourceMappingURL=style.css.map */

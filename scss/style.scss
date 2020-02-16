@@ -63,6 +63,23 @@ html {
             padding: 0 50px;
             font-weight: 300;
         }
+
+        @media (max-width: 830px) and (orientation: landscape) {
+            font-size: 5rem;
+        }
+
+        @media (max-width: 670px) and (orientation: landscape) {
+            font-size: 4.2rem;
+        }
+
+        @media (orientation: landscape) and (max-width: 570px) {
+            font-size: 3.5rem;
+            font-weight: 300;
+        }
+
+        @media (orientation: portrait) and (min-width: 1020px) {
+            font-size: 10rem;
+        }
     }
 
     &__description {
@@ -107,6 +124,22 @@ html {
         @include mq (very-small) {
             font-size: 2rem;
         }
+
+        @media (max-width: 830px) and (orientation: landscape) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 670px) and (orientation: landscape) {
+            font-size: 2rem;
+        }
+
+        @media (orientation: landscape) and (max-width: 570px) {
+            font-size: 1.8rem;
+        }
+
+        @media (orientation: portrait) and (min-width: 1020px) {
+            font-size: 5.5rem;
+        }
     }
 
     &__article {
@@ -129,6 +162,22 @@ html {
 
         @include mq (very-small) {
             font-size: 1.2rem;
+        }
+
+        @media (max-width: 830px) and (orientation: landscape) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 670px) and (orientation: landscape) {
+            font-size: 1.5rem;
+        }
+
+        @media (orientation: landscape) and (max-width: 570px) {
+            font-size: 1.2rem;
+        }
+
+        @media (orientation: portrait) and (min-width: 1020px) {
+            font-size: 3rem;
         }
     }
 
@@ -156,6 +205,18 @@ html {
 
         @include mq (very-small) {
             font-size: 1.5rem;
+        }
+
+        @media (max-width: 670px) and (orientation: landscape) {
+            font-size: 1.8rem;
+        }
+
+        @media (orientation: landscape) and (max-width: 570px) {
+            font-size: 1.4rem;
+        }
+
+        @media (orientation: portrait) and (min-width: 1020px) {
+            font-size: 3rem;
         }
     }
 
@@ -204,10 +265,17 @@ html {
 
     &.animation .main__title {
         animation: mainTitleApperance 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
+
+        @media (orientation: landscape) and (max-width: 830px) {
+            animation: phoneMainTitleApp 1s 1 both, textTitleMove 15s linear 1s infinite alternate both;
+        }
     }
 
     &.animation .main__description {
         animation: sectionArticleApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
-    }
 
+        @media (orientation: landscape) and (max-width: 830px) {
+            animation: phoneSecArtApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
+        }
+    }
 }
