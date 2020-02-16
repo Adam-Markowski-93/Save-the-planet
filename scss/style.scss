@@ -32,7 +32,7 @@ html {
         right: 0;
         padding: 0 75px;
         text-align: center;
-        font-size: 10rem;
+        font-size: 9rem;
         color: white;
         font-weight: 200;
 
@@ -276,6 +276,41 @@ html {
 
         @media (orientation: landscape) and (max-width: 830px) {
             animation: phoneSecArtApperance 1s 1 ease both, sectionArticleMove 15s 1s infinite linear alternate backwards;
+        }
+    }
+}
+
+.navigation {
+    position: fixed;
+    top: 50%;
+    right: 5px;
+    width: 10px;
+    height: 20%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__item {
+        background-color: transparent;
+        flex-basis: 5px;
+        width: 5px;
+        border: 1px solid white;
+        border-radius: 50%;
+
+        & .active {
+            flex-basis: 8px;
+            width: 8px;
+            background-color: #fff;
         }
     }
 }
